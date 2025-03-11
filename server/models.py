@@ -40,7 +40,6 @@ class Onboarding(db.Model):
 
     # Foreign key to store the employee id
     employee_id = db.Column(db.Integer, db.ForeignKey('employees.id'))
-
     # Relationship mapping onboarding to related employee
     employee = db.relationship('Employee', back_populates = 'onboarding')
 
